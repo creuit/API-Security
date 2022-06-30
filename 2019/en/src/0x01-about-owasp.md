@@ -1,13 +1,13 @@
 About OWASP
 ===========
 
-The Open Web Application Security Project (OWASP) is an open community dedicated
-to enabling organizations to develop, purchase, and maintain applications and
-APIs that can be trusted.
+Το OWASP (Open Web Application Security Project) είναι μια ανοιχτή κοινότητα
+που αποσκοπεί στο να βοηθήσει οργανισμούς ήτε να παράγουν, ήτε να αγοράσουν ήτε
+να συντηρήσουν εφαρμογές και APIs που θα είναι ασφαλή.
 
-At OWASP, you'll find free and open:
+Στο OWASP θα βρείτε δωρεάν και ανοιχτά τα παρακάτω:
 
-* Application security tools and standards.
+* Εργαλεία ασφαλείας εφαρμογών (Application security tools) καθώς και πρότυπα (standards).
 * Complete books on application security testing, secure code development, and
   secure code review.
 * Presentations and [videos][1].
