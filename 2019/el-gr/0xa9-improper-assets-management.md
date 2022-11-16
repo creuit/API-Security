@@ -18,32 +18,19 @@ API9:2019 Improper Assets Management
   * Ποια είναι η ροή των δεδομένων;
 * Δεν υπάρχει τεκμηρίωση (documentation) ή η υπάρχουσα τεκμηρίωση δεν έχει ενημερωθεί.
 * Δεν υπάρχει σχέδιο συνταξιοδότησης (retirement plan) για κάθε έκδοση API.
-* Hosts inventory is missing or outdated.
-* Integrated services inventory, either first- or third-party, is missing or
-  outdated.
-* Old or previous API versions are running unpatched.
+* Το απόθεμα του εξυπηρετητή λείπει ή είναι ξεπερασμένο.
+* Το ενσωματωμένο απόθεμα λειτουργιών, πρώτου ή τρίτου μέρους, λείπει ή είναι ξεπερασμένο. 
+* Παλιές ή προηγούμενες εκδόσεις API εκτελούνται άψογα.
 
 ## Παραδείγματα Σεναρίων Επίθεσης
 
 ### Σενάριο Επίθεσης #1
 
-After redesigning their applications, a local search service left an old API
-version (`api.someservice.com/v1`) running, unprotected, and with access to the
-user database. While targeting one of the latest released applications, an
-attacker found the API address (`api.someservice.com/v2`). Replacing `v2` with
-`v1` in the URL gave the attacker access to the old, unprotected API,
-exposing the personal identifiable information (PII) of over 100 Million users.
+Έπειτα από αναδιαμόρφωση των εφαρμογών τους, μια τοπική λειτουργία αναζήτησης άφησε μία παλιά έκδοση API (api.someservice.com/v1) να εκτελείται, απροστάτευτη, και με πρόσβαση στην βάση δεδομένων του χρήστη.  Καθώς στόχευε μία από τις τρέχουσες εκδόσεις, ένας εισβολέας βρήκε την διεύθυνση API (api.someservice.com/v2). Αντικαθιστώντας το v1 με το v2 στην διεύθυνση, ο εισβολέας απέκτησε πρόσβαση στο παλιό, απροστάτευτο API, εκθέτοντας την προσωπική αναγνωρίσιμη πληροφορία (PII) περισσότερων από 100 Εκατομμύρια χρηστών.
 
 ### Σενάριο Επίθεσης #2
 
-A social network implemented a rate-limiting mechanism that blocks attackers
-from using brute-force to guess reset password tokens. This mechanism wasn’t
-implemented as part of the API code itself, but in a separate component between
-the client and the official API (`www.socialnetwork.com`).
-A researcher found a beta API host (`www.mbasic.beta.socialnetwork.com`) that
-runs the same API, including the reset password mechanism, but the rate limiting
-mechanism was not in place. The researcher was able to reset the password of any
-user by using a simple brute-force to guess the 6 digits token.
+Ένα κοινωνικό δίκτυο εφάρμοσε μηχανισμό περιορισμού ταχύτητας που εμποδίζει τους εισβολείς να εκτελέσουν επίθεση  ωμής βίας (brute-force) για να υπολογίσουν το διακριτικό (token) επαναφοράς συνθηματικού. Αυτός ο μηχανισμός δεν υλοποιήθηκε ως μέρος του  ίδιου κώδικα API,  αλλά σε ξεχωριστό βρόγχο μεταξύ του πελάτη και  του επίσημου API (www.socialnetwork.com). Ένας ερευνητής βρήκε έναν beta εξυπηρετητή  API (www.mbasic.beta.socialnetwork.com) που εκτελεί το ίδιο API, συμπεριλαμβανομένου του μηχανισμού επαναφοράς συνθηματικού, αλλά ο μηχανισμός περιορισμού ταχύτητας δεν υπήρχε. Ο ερευνητής ήταν ικανός να επαναφέρει το συνθηματικό οποιουδήποτε χρήστη χρησιμοποιώντας απλή ωμοβία για να υπολογίσει το διακριτικό 6 ψηφίων.
 
 ## Τρόπος Πρόληψης
 
